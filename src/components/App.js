@@ -1,17 +1,17 @@
 import React from "react";
-import NavBar from "./NavBar";
-import Home from "./Home";
+import blogData from "../data/blog";
+import Header from "./Header";
 import About from "./About";
-import ProjectList from "./ProjectList";
-import user from "../data/user";
+import ArticleList from "./ArticleList";
+
+console.log(blogData);
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <Home username={user.name} city={user.city} color={user.color} />
-      <About bio={user.bio} links={user.links} />
-      <ProjectList projects={user.projects} />
+    <div className="App">
+      <Header name={blogData.name}/>
+      <About image={blogData.image} about={blogData.about}/>
+      <ArticleList posts={blogData.posts}/>
     </div>
   );
 }

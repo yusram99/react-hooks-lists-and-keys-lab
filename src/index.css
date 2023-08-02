@@ -1,110 +1,59 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --bg: #282c34;
+  --header: #fff;
+  --link: #61dafb;
+  --text: hsla(0, 0%, 100%, 0.88);
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  margin: 0;
+  font-family: "Merriweather", "Georgia", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg);
+  color: var(--text);
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Playfair Display", serif;
-  margin-bottom: 1em;
+h3 {
+  font-size: 2em;
+  font-family: Montserrat, sans-serif;
+  font-weight: 900;
 }
 
-p {
-  margin-bottom: 1em;
+.App {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5rem 1rem;
+  max-width: 700px;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+header h1 {
+  font-size: 3em;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-size: 1.2em;
-  color: firebrick;
-  border-bottom: 2px solid firebrick;
-  transition: 0.1s;
-}
-
-nav a:hover,
-nav a:active {
-  color: tomato;
-  border-bottom: 2px solid tomato;
-}
-
-#home {
-  height: 50vh;
-  min-height: 400px;
-  background-color: cornsilk;
-}
-
-#home,
-#about,
-#projects {
+aside {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 1rem;
+  margin-bottom: 3rem;
 }
 
-#about img {
-  max-height: 50%;
+aside img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  background-color: black;
 }
 
-#about a {
-  display: block;
+article {
+  margin-bottom: 3rem;
 }
 
-#projects {
-  background-color: cornsilk;
-  min-height: 400px;
+article p {
+  margin-top: 0.25rem;
 }
 
-#project-list {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  max-width: 800px;
-}
-
-.project-item {
-  background-color: white;
-  padding: 2rem;
-  margin: 1rem;
-}
-
-.technologies span {
-  background-color: lightblue;
-  margin: 0.25rem;
-  padding: 0.5rem;
-  border-radius: 4px;
-  display: inline-block;
-}
-
-@media (min-width: 700px) {
-  #project-list {
-    flex-direction: row;
-  }
-
-  .project-item {
-    width: 50%;
-  }
+article h3 {
+  color: var(--link);
+  margin-bottom: 0rem;
 }
